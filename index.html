@@ -9,6 +9,26 @@
 </head>
 <body>
     
+    <style>
+        .fixedButton{
+            position: fixed;
+            bottom: 0px;
+            right: 0px; 
+            padding: 20px;
+        }
+        .roundedFixedBtn{
+          height: 60px;
+          line-height: 80px;  
+          width: 60px;  
+          font-size: 2em;
+          font-weight: bold;
+          border-radius: 50%;
+          background-color: #4CAF50;
+          color: white;
+          text-align: center;
+          cursor: pointer;
+        }
+    </style>
     <script>
         var testMedalliadigital = "interno";
         var testMedallia = "test";
@@ -29,9 +49,11 @@
         <h1> WORD </h1>
     </div>-->
     
-    <button id="surveybr" style="border: none;margin-top: 0px;position: fixed !important;" alt="Feedback" class="br_vertical_button kampyle_left  noOutline "><div class="kampyle_button"></div><div data-aut="feedback" class="kampyle_button-text">Feedback</div></button>
+      <a class="fixedButton" href>
+         <div class="roundedFixedBtn"><i class="fa fa-phone"></i></div>
+      </a>
     
-    <button type="buttom" id="AVIMedalliaNPS">Form</button>
+    <!--button type="buttom" id="AVIMedalliaNPS">Form</button-->
     
 </body>
 </html>
