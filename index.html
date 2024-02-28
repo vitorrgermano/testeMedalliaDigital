@@ -25,11 +25,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript-
     <!--script type="text/javascript" src="https://resources.digital-cloud.medallia.com/wdcus/70752/onsite/embed.js" async=""></script-->
     <!--script type="text/javascript" src="https://nebula-cdn.kampyle.com/us/wu/1206527/onsite/embed.js" async></script-->
     <!--script type="text/javascript" src="https://resources.digital-cloud-west.medallia.com/wdcwest/300380/onsite/embed.js" async></script-->
-    <!--script>
-        var name = 'Vitor';
-        var testMedallia = 'true';
-        var pageNameAtual = 'logoutAtacadoPJ';
-</script-->
+    <script>
+        function cliqueBotao(){
+            var testMedalliadigital = 'Teste1';
+            var Pagenameatual = 'Home';
+            var assunto = '12569159';
+            var isVip = document.getElementById('desc').textContent;
+            KAMPYLE_ONSITE_SDK.showForm(28637);
+        }
+</script>
     <!--<script type="text/javascript" src="https://nebula-cdn.kampyle.com/us/wu/667211/onsite/embed.js" async></script-->
     
     <h1>PÁGINA TESTE PESQUISA</h1>
@@ -42,7 +46,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript-
     </div>-->
     
    <div>
-      <button onclick="KAMPYLE_ONSITE_SDK.showForm(28637)">Chama Medallia</button>
+        <p id='desc'>FECHAMENTO DE CONTA</p>
+      <button onclick="cliqueBotao()">Chama Medallia</button>
     <!--a class="fixedButton" id="buttonB" style="position: fixed; bottom: 0px; left: -5px; padding-bottom: 50%; text-decoration: none;" href>
          <div class="fixedBtn" style="height: 125px; width: 35px; font-size: 15px; background-color: #2867AE; color: white; cursor: pointer; border-radius: 3px;">
              <p class="feedback" style="ont-family: sans-serif; font-weight: 400; writing-mode: vertical-rl; text-align: center; margin: 0 10px; padding: 30px 0;">
