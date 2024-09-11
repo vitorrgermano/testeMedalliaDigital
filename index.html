@@ -12,6 +12,17 @@
 </script>
     <script type="text/javascript" src="https://nebula-cdn.kampyle.com/eu/we/359685/onsite/embed.js" async></script>
 <h1>TESTE DIGITAL</h1>
+
+    <input type="text" id="myInput">
+<button onclick="myFunction()">Click me</button>
+
+<script>
+function myFunction() {
+  const inputValue = document.getElementById("myInput").value;
+  KAMPYLE_ONSITE_SDK.showForm(inputValue)
+  console.log(inputValue); 
+}
+</script>
     
 </body>
 </html>
