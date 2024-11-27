@@ -8,20 +8,30 @@
     <title>Medallia Digital</title>
 </head>
 <body>
-<script>
-</script>
-    <script type="text/javascript" src="https://nebula-cdn.kampyle.com/eu/we/359685/onsite/embed.js" async></script>
+    <script type="text/javascript" src="https://resources.digital-cloud-us-stg.medallia.com/wdcusstg/41735/onsite/embed.js" async></script>
 <h1>TESTE DIGITAL</h1>
 
     <input type="text" id="myInput">
 <button onclick="myFunction()">Click me</button>
 
+<p>
+    30168
+    4037
+    9154
+</p>
+    
 <script>
 function myFunction() {
   const inputValue = document.getElementById("myInput").value;
   KAMPYLE_ONSITE_SDK.showForm(inputValue)
   console.log(inputValue); 
 }
+window.addEventListener('MDigital_Submit_Feedback', function(mdEvent) {
+ var mdDetail = mdEvent.detail;
+ var mdData = mdEvent.detail.Content;
+  console.log(mdDetail);
+  console.log(mdData);
+});
 </script>
     
 </body>
