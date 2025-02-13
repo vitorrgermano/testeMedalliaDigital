@@ -88,21 +88,30 @@ window.addEventListener('MDigital_Submit_Feedback', function(mdEvent) {
   console.log(mdData);
 });
 </script>
-    <div class="feedback-button" onclick="toggleFeedbackForm()">Feedback</div>
+   <div class="feedback-button" onclick="toggleFeedbackForm()">
+        <span id="feedbackText">Feedback</span>
+    </div>
     <div class="feedback-form" id="feedbackForm">
-        <button class="close-button" onclick="toggleFeedbackForm()">&times;</button>
         <h3>Feedback</h3>
         <textarea placeholder="Your feedback..."></textarea>
         <button onclick="submitFeedback()">Submit</button>
-    </div>
+</div>
     <script>
         function toggleFeedbackForm() {
             var form = document.getElementById('feedbackForm');
-            form.style.display = (form.style.display === 'block') ? 'none' : 'block';
+            var buttonText = document.getElementById('feedbackText');
+            if (form.style.display === 'block') {
+                form.style.display = 'none';
+                buttonText.textContent = 'Feedback';
+            } else {
+                form.style.display = 'block';
+                buttonText.textContent = 'Close';
+            }
         }
         function submitFeedback() {
             alert('Thank you for your feedback!');
             document.getElementById('feedbackForm').style.display = 'none';
+            document.getElementById('feedbackText').textContent = 'Feedback';
         }
     </script>
 </body>
