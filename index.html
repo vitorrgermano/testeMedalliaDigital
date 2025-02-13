@@ -23,6 +23,19 @@
             font-size: 16px;
             writing-mode: vertical-rl;
             text-orientation: mixed;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+        }
+        .close-btn {
+            background: red;
+            color: white;
+            border: none;
+            padding: 5px;
+            cursor: pointer;
+            font-size: 12px;
+            border-radius: 50%;
         }
         .feedback-form {
             display: none;
@@ -48,17 +61,6 @@
             padding: 10px;
             cursor: pointer;
             width: 100%;
-        }
-        .close-button {
-            background: red;
-            color: white;
-            border: none;
-            padding: 5px 10px;
-            cursor: pointer;
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            border-radius: 50%;
         }
     </style>
 </head>
@@ -88,30 +90,26 @@ window.addEventListener('MDigital_Submit_Feedback', function(mdEvent) {
   console.log(mdData);
 });
 </script>
-   <div class="feedback-button" onclick="toggleFeedbackForm()">
-        <span id="feedbackText">Feedback</span>
+   <div class="feedback-button" id="feedbackButton">
+        <span onclick="toggleFeedbackForm()">Feedback</span>
+        <button class="close-btn" onclick="hideButton()">&times;</button>
     </div>
     <div class="feedback-form" id="feedbackForm">
         <h3>Feedback</h3>
         <textarea placeholder="Your feedback..."></textarea>
         <button onclick="submitFeedback()">Submit</button>
-</div>
+    </div>
     <script>
         function toggleFeedbackForm() {
             var form = document.getElementById('feedbackForm');
-            var buttonText = document.getElementById('feedbackText');
-            if (form.style.display === 'block') {
-                form.style.display = 'none';
-                buttonText.textContent = 'Feedback';
-            } else {
-                form.style.display = 'block';
-                buttonText.textContent = 'Close';
-            }
+            form.style.display = (form.style.display === 'block') ? 'none' : 'block';
         }
         function submitFeedback() {
             alert('Thank you for your feedback!');
             document.getElementById('feedbackForm').style.display = 'none';
-            document.getElementById('feedbackText').textContent = 'Feedback';
+        }
+        function hideButton() {
+            document.getElementById('feedbackButton').style.display = 'none';
         }
     </script>
 </body>
